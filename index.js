@@ -18,8 +18,75 @@ const questions = [
     "Would you like to reference any tests for this project?"
 ];
 
+inquirer
+    .prompt([
+        {
+            type: "input",
+            message: questions[0],
+            name: "title",
+        },
+        {
+            type: "input",
+            message: questions[1],
+            name: "description",
+        },
+        {
+            type: "input",
+            message: questions[2],
+            name: "link",
+        },
+        {
+            type: "input",
+            message: questions[3],
+            name: "tableContents",
+        },
+        {
+            type: "input",
+            message: questions[4],
+            name: "installation",
+        },
+        {
+            type: "input",
+            message: questions[5],
+            name: "instructions",
+        },
+        {
+            type: "input",
+            message: questions[6],
+            name: "screenShots",
+        },
+        {
+            type: "input",
+            message: questions[7],
+            name: "collaborators",
+        },
+        {
+            type: "input",
+            message: questions[8],
+            name: "license",
+        },
+        {
+            type: "input",
+            message: questions[9],
+            name: "badges",
+        },
+        {
+            type: "input",
+            message: questions[10],
+            name: "moreCollab",
+        },
+        {
+            type: "input",
+            message: questions[11],
+            name: "tests",
+        },
+    ])
+
 // TODO: Create a function to write README file
-// function writeToFile('ReadMe.md', data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, 
+        err => err ? console.error(error) : console.log("Success! Your ReadMe.md is being generated."));
+}
 
 // TODO: Create a function to initialize app
 function init() {}

@@ -69,18 +69,11 @@ const questions = [
 
 inquirer
     .prompt(questions)
-    .then((response) => writeToFile(response)); 
+    .then((response) => writeToFile("testREADME.md", response)); 
 
     // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile("testREADME.md", generate("data"), err => err //error "response is not defined". The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined.Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch().
+    fs.writeFile(fileName, generate(data), err => err 
         ? console.error(err) 
         : console.log("Success! Your ReadMe.md is being generated."));
 };
-
-// writeToFile()
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();

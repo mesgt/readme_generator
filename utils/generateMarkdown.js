@@ -13,46 +13,45 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  `# ${response.title}
-         
-  ## Description 
-  ${response.description}
-  
-  ## Links 
-  Published site: ${response.link}` 
- if (tableContents==="no") {
-     console.log("You chose to not include a Table of Contents");
- }
- else {
-     `## Table of Contents
+const generateMarkdown = data => {
+  return 
+`# ${data.title}
 
-     ## Installation
-     ${installation}
+## Description 
+${data.description}
 
-     ## Usage
-     ${instructions}`
-     if (screenShots==="no") {
-         console.log("You chose to not include screenshots");
-     }
-     else {
-         `**Screenshots: <img src="assets/image/fileName.png" alt="#" width="300" /> 
-         
-         ## Credits
-         ${collaborators}
-         
-         ## License
-         ${license}
-         
-         ## Badges
-         ${badges}
-         
-         ## Contributing
-         ${moreCollab}
-         
-
-`;
+## Links 
+Published site: ${data.link}` 
+if (tableContents==="no") {
+  console.log("You chose to not include a Table of Contents");
 }
+else {
+`## Table of Contents
 
+## Installation
+${data.installation}
+
+## Usage
+${data.instructions}`
+if (data.screenShots==="no") {
+console.log("You chose to not include screenshots");
+}
+else {
+`**Screenshots: <img src="assets/image/fileName.png" alt="#" width="300" /> 
+
+## Credits
+${data.collaborators}
+
+## License
+${data.license}
+
+## Badges
+${data.badges}
+
+## Contributing
+${data.moreCollab}
+`
+}
+}
+};
 module.exports = generateMarkdown;

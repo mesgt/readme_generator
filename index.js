@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generate = require("./utils/generateMarkdown");
-// const { lookup } = require("dns");
+const generate = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -69,20 +68,15 @@ const questions = [
 ];
 
 inquirer
-    .prompt(questions).then(response => console.log(response));
-        
+    .prompt(questions)
+    .then((response) => writeToFile(response)); 
 
-        //     }
-        // }
-    // });
-        // console.log(response));
-
-// TODO: Create a function to write README file
-// function writeToFile(readMe) {
-//     fs.writeFile("readMe.md", html, 
-//         err => err ? console.error(err) : 
-//         console.log("Success! Your ReadMe.md is being generated."));
-// }
+    // TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile("testREADME.md", generate("data"), err => err //error "response is not defined". The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined.Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch().
+        ? console.error(err) 
+        : console.log("Success! Your ReadMe.md is being generated."));
+};
 
 // writeToFile()
 // TODO: Create a function to initialize app

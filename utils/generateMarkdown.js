@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// function renderLicenseBadge(license) {
+// function renderLicenseBadge(license) {}
   //switch statement. link it
 // }
 
@@ -11,6 +11,12 @@
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 // function renderLicenseSection(license) {}
+let tableOfContents = hasTable => {
+  if(hasTable) {
+    return `## Table of Contents`;
+  }
+    return "";
+}
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
@@ -21,23 +27,16 @@ const generateMarkdown = data => {
 ${data.description}
 
 ## Links 
-Published site: ${data.link}` 
-if (tableContents==="no") {
-  console.log("You chose to not include a Table of Contents");
-}
-else { `
-## Table of Contents
+Published site: ${data.link} 
+${tableOfContents(data.tableContents)}
 
 ## Installation
 ${data.installation}
 
 ## Usage
-${data.instructions}`
-if (data.screenShots==="no") {
-console.log("You chose to not include screenshots");
-}
-else {
-`**Screenshots: <img src="assets/image/fileName.png" alt="#" width="300" /> 
+${data.instructions}
+
+
 
 ## Credits
 ${data.collaborators}
@@ -51,7 +50,8 @@ ${data.badges}
 ## Contributing
 ${data.moreCollab}
 `
-}
-}
+
 };
+
 module.exports = generateMarkdown;
+

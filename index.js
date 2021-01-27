@@ -21,33 +21,36 @@ const questions = [
         name: "link",
     },
     {
-        type: "input",
-        message: "Would you like to include a table of contents? (yes/no)",
+        type: "confirm",
+        message: "Would you like to include a table of contents?", 
         name: "tableContents",
     },
     {
         type: "input",
         message: "What are (if any) installation requirements for your project?",
         name: "installation",
+        default: "N/A"
     },
     {
         type: "input",
-        message: "Provide instruction and examples of use:",
+        message: "Provide instruction and examples of use for your project:",
         name: "instructions",
     },
     {
-        type: "input",
-        message: "Would you like to add screenshots? (yes/no)",
+        type: "confirm",
+        message: "Would you like to add screenshots?",
         name: "screenShots",
     },
     {
         type: "input",
         message: "List collaborators or third-party attribution (if any):",
         name: "collaborators",
+        default: "N/A"
     },
     {
-        type: "input",
-        message: "List the license:",
+        type: "list",
+        message: "Select the license:",
+        choices: ["None", "MIT License", "Apache 2.0 License", "GNU General Public License v3.0", "Boost Software License 1.0", "BSD 3-Clause License", "CC0", "Eclipse Public License 1.0", "IBM Public License Version 1.0", "ISC License (ISC)", "Mozilla Public License 2.0", "Attribution License (BY)", "The Perl License", "The Unlicense", "WTFPL"],
         name: "license",
     },
     {
@@ -61,9 +64,10 @@ const questions = [
         name: "moreCollab",
     },
     {
-        type: "input",
-        message: "Would you like to reference any tests for this project? (yes/no)",
+        type: "confirm",
+        message: "Would you like to reference any tests for this project?",
         name: "tests",
+        default: "No"
     },
 ];
 

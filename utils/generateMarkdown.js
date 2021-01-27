@@ -16,7 +16,7 @@ let tableOfContents = hasTable => {
 
 let screenShots = hasScreenshots => {
   if (hasScreenshots) {
-    return `<img src=",/assets/image/YOUR_FILE_NAME.png" alt="description" width="300" />;`;
+    return `![alt text](assets/images/screenshot.png)`;
   }
   return "";
 };

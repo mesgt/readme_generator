@@ -81,7 +81,7 @@ const questions = [
 
 inquirer
     .prompt(questions)
-    .then((response) => writeToFile("testREADME.md", response)); 
+    .then((response) => writeToFile("README_1.md", response)); 
 
 //Function to write README file
 function writeToFile(fileName, data) {

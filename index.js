@@ -29,7 +29,7 @@ const questions = [
         type: "input",
         message: "What are (if any) installation requirements for your project?",
         name: "installation",
-        default: "N/A"
+        default: "N/A",
     },
     {
         type: "input",
@@ -45,13 +45,14 @@ const questions = [
         type: "input",
         message: "List collaborators or third-party attribution (if any):",
         name: "collaborators",
-        default: "N/A"
+        default: "N/A",
     },
     {
         type: "list",
         message: "Select the license:",
         choices: ["None", "MIT License", "Apache 2.0 License", "GNU General Public License v3.0", "Boost Software License 1.0", "BSD 3-Clause License", "CC0", "Eclipse Public License 1.0", "IBM Public License Version 1.0", "ISC License (ISC)", "Mozilla Public License 2.0", "Attribution License (BY)", "The Perl License", "The Unlicense", "WTFPL"],
         name: "license",
+        default: "None",
     },
     {
         type: "input",

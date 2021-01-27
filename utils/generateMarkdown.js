@@ -13,10 +13,24 @@
 // function renderLicenseSection(license) {}
 let tableOfContents = hasTable => {
   if(hasTable) {
-    return `## Table of Contents`;
+    return `
+    ## Table of Contents
+    * [Description](#Description) 
+    * [Links](#Links)
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [Credits](#Credits)
+    * [License](#License)
+    * [Badges](#Badges)
+    * [Contributing](#Contributing)`;
   }
     return "";
-}
+};
+
+
+
+
+
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
@@ -28,6 +42,7 @@ ${data.description}
 
 ## Links 
 Published site: ${data.link} 
+
 ${tableOfContents(data.tableContents)}
 
 ## Installation
@@ -36,7 +51,7 @@ ${data.installation}
 ## Usage
 ${data.instructions}
 
-
+//ADD SCREENSHOT FUNCTION
 
 ## Credits
 ${data.collaborators}

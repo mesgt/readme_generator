@@ -12,7 +12,7 @@
 // If there is no license, return an empty string
 // function renderLicenseSection(license) {}
 let tableOfContents = hasTable => {
-  if(hasTable) {
+  if (hasTable) {
     return `
     ## Table of Contents
     * [Description](#Description) 
@@ -27,6 +27,29 @@ let tableOfContents = hasTable => {
     return "";
 };
 
+let screenShots = hasScreenshots => {
+  if (hasScreenshots) {
+    return `
+    <img src=",/assets/image/YOUR_FILE_NAME.png" alt="description" width="300" />;`;
+  }
+  return "";
+};
+
+let likeHelp = willWorkWithOthers => {
+  if (willWorkWithOthers) {
+    return `
+    I would like to welcome you to work with me on improving this project. 
+    Please note that this project is released with a Contributor Code of Conduct. 
+    By participating in this project you agree to abide by its terms. 
+    
+    If you are interested in collaborating with me on this project, please visit https://www.contributor-covenant.org/ 
+    to review the most up to date Contributor Covenant. In Node.js, please run the following command 
+    "npm install -g covgen" and "covgen '<your_email_address>'". If you have npm 5.x installed you can run 
+    npx covgen <your_email_address> instead of installing globally.
+    `
+  };
+  return "";
+}
 
 
 
@@ -51,7 +74,7 @@ ${data.installation}
 ## Usage
 ${data.instructions}
 
-//ADD SCREENSHOT FUNCTION
+${screenShots(data.screenShots)}
 
 ## Credits
 ${data.collaborators}
@@ -63,9 +86,8 @@ ${data.license}
 ${data.badges}
 
 ## Contributing
-${data.moreCollab}
+${likeHelp(data.moreCollab)}
 `
-
 };
 
 module.exports = generateMarkdown;

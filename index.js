@@ -60,15 +60,16 @@ const questions = [
         name: "badges",
     },
     {
-        type: "input",
+        type: "confirm",
         message: "List guidelines for how you would like to have others contribute to your code:",
         name: "moreCollab",
+        default: "Yes",
     },
     {
         type: "confirm",
         message: "Would you like to reference any tests for this project?",
         name: "tests",
-        default: "No"
+        default: "No",
     },
 ];
 

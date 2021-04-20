@@ -1,31 +1,54 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # ReadMe Generator
 
-## Description 
-To allow developers more time to code, this application prompts for basic ReadMe documentation questions. The responses and the applicable headings are then displayed for further modification if necessary. The code is written using Node. js with inquirer and fs packets. 
+Easy and convenient way to build your ReadMe files for any project. 
 
-## Links 
-Published site: https://mesgt.github.io/readme_generator/ 
 
-gitHub link: https://github.com/mesgt/readme_generator
+## Deployed Link
 
-## Installation
-Include inquirer and fs Node.js packets for code to function properly.
+https://mesgt.github.io/readme_generator/
+
+
+# Application Details
+
+## Purpose
+
+Documentation can be a chore for many developers. The goal of this app was to make ReadMe documentation a little easier.
+
+## Description
+
+This app was developed to increase documentation efficiency, and allow for consistency throughout all ReadMe files. The user is asked a series of questions via terminal and the responses and the applicable headings are then displayed with the file name 'README_1.md'. The user can further modify the file if necessary. The code is written using NodeJS with inquirer and fs packets. 
+
+![](./assets/gif/readMe_Generator.gif)
+<br>
+<img src="./assets/images/readMe_Generator1.png" alt="ReadMe Generator" width="300" />
+
+
+## Technologies
+
+<li>NodeJS </li>
+<li>Inquirer </li>
+
 
 ## Usage
 Open internal terminal for index.js and run "node index.js" command. Answer questions when prompted. The file can be further edited following rendering.
 
-![](./assets/gif/readMe_Generator.gif)
 
-<img src="./assets/images/readMe_Generator1.png" alt="ReadMe Generator" width="300" />
+## Future Development
 
-## Credits
-N/A
+Ideas for future development include:
+1. Generated ReadMe output stored in an output file for user to easily locate
+2. ReadMe file name to be the project title to prevent previously generated ReadMe from being over-written 
 
 ## License
-The Unlicense
 
-## Badges
-N/A
+Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
+
+## GitHub 
+
+https://github.com/mesgt/readme_generator
+
 
 ## Contributing
 
@@ -35,7 +58,4 @@ Please note that this project is released with a Contributor Code of Conduct.
 By participating in this project you agree to abide by its terms. 
 
 If you are interested in collaborating with me on this project, please visit (https://www.contributor-covenant.org/version/2/0/code_of_conduct/) to review the latest version of Contributor Covenant. In Node.js, please run the following command "npm install -g covgen" and "covgen '<your_email_address>'". If you have npm 5.x installed you can run npx covgen <your_email_address> instead of installing globally.
-
-
-
 

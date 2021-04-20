@@ -78,6 +78,7 @@ const questions = [
         default: "No",
     },
 ];
+// console.log(questions);
 
 inquirer
     .prompt(questions)

@@ -7,7 +7,7 @@ Easy and convenient way to build your ReadMe files for any project.
 
 ## Deployed Link
 
-https://mesgt.github.io/readme_generator/
+N/A
 
 
 # Application Details
